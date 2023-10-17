@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { API_URL } from "../../constants";
 
-function PostsLists() {
+function PostsList() {
     const [post, setPosts] = useState([]);
     const [, setLoading] = useState(true);
     const [, setError] = useState(null);
@@ -40,4 +40,4 @@ function PostsLists() {
     )
 }
 
-export default PostsLists;
+export default PostsList;

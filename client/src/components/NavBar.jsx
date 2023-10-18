@@ -5,7 +5,7 @@ import { Link, NavLink } from 'react-router-dom'
 
 function NavBar() {
     return (
-        <nav >
+        <nav className="nav-wrapper red darken-3">
             <Link to="/">Post List</Link>
             {" | "}
             <Link to="/new">New Post</Link>

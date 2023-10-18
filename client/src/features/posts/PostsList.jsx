@@ -1,6 +1,7 @@
 // API_URL comes from the .env.development file
 import React, { useState, useEffect } from 'react';
 import { API_URL } from "../../constants";
+import { useParams, useNavigate, Link } from "react-router-dom";
 
 function PostsList() {
     const [post, setPosts] = useState([]);
@@ -32,7 +33,11 @@ function PostsList() {
         <div>
             {post.map((post) => (
                 <div key={post.id} className="post-container">
-                    <h2>{post.title}</h2>
+                    <h2>
+                        <Link to={`/posts/${post.id}`} className="post_title">
+                            {post.title}
+                        </Link>
+                    </h2>
                     <p>{post.body}</p>
                 </div>
             ))}
